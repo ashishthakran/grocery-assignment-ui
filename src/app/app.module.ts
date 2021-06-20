@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app.routing.module";
 import {GroceryModule} from "./grocery/grocery.module";
+import {DatePipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import {GroceryModule} from "./grocery/grocery.module";
     AppRoutingModule,
     GroceryModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

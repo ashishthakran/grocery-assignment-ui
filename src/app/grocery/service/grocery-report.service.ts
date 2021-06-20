@@ -12,12 +12,8 @@ export class GroceryReportService {
 
   constructor(private http: HttpClient) { }
 
-  getGroceryItemNames(): Observable<any> {
-    return this.http.get(`${this.GROCERIES_BASE_URL}/names`);
-  }
-
-  getMaxPriceReport(): Observable<any> {
-    return this.http.get(`${this.GROCERIES_BASE_URL}/reports/max-price`);
+  getMaxPriceReport(pageNo: number, pageSize: number): Observable<any> {
+    return this.http.get(`${this.GROCERIES_BASE_URL}/reports/max-price?pageNo=${pageNo}&pageSize=${pageSize}`);
   }
 
   getPriceTrendReport(itemName: string): Observable<any> {
