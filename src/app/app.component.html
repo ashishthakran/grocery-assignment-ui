@@ -16,7 +16,13 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="reports/max-price" routerLinkActive="active" style="color: blue!important;">
+            <a class="nav-link active" aria-current="page" routerLink="upload-items" routerLinkActive="active" style="color: blue!important;">
+              <span data-feather="bar-chart-2"></span>
+              Upload Items
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="reports/max-price" style="color: blue!important;">
               <span data-feather="bar-chart-2"></span>
               Max Price Report
             </a>
@@ -29,4 +35,7 @@
       <router-outlet></router-outlet>
     </main>
   </div>
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">Please Wait. </p>
+  </ngx-spinner>
 </div>

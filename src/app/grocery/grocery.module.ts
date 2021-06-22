@@ -6,16 +6,22 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "../app.routing.module";
 import {AgGridModule} from "@ag-grid-community/angular";
 import {CommonModule} from "@angular/common";
+import { FileUploadComponent } from './component/file-upload/file-upload.component';
+import {NgxSpinnerModule} from "ngx-spinner";
+import {FileUploadModule} from "ng2-file-upload";
 
 @NgModule({
   declarations: [
     MaxPriceReportComponent,
-    PriceTrendReportComponent
+    PriceTrendReportComponent,
+    FileUploadComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
+    NgxSpinnerModule,
+    FileUploadModule,
     AgGridModule.withComponents([])
   ],
   providers: []

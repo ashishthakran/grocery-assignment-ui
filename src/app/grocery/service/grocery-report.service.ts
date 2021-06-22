@@ -9,6 +9,7 @@ import {AppConstants} from "../../shared/AppConstants";
 export class GroceryReportService {
 
   private readonly GROCERIES_BASE_URL = AppConstants.APP_BASE_URL + '/api/groceries';
+  public readonly FILE_UPLOAD_URL = AppConstants.APP_BASE_URL + '/api/groceries/upload';
 
   constructor(private http: HttpClient) { }
 
